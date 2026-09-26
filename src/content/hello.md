@@ -1,7 +1,7 @@
 ---
-title: "Hello, markdown"
-date: "2026-09-22"
-description: "First post of the static markdown content collection."
+title: "Chi sono?"
+date: "2026-09-26"
+description: "bella domanda"
 ---
 
 # Hello, markdown
