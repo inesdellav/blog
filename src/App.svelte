@@ -64,7 +64,7 @@
   <Seo path="/" />
   <!-- MAIN PAGE -->
   <main class="page">
-    <h1 class="title">Ines's Blog</h1>
+    <h1 class="title">Ines</h1>
     <ul class="steps">
       {#each posts as post (post.slug)}
         <li>
