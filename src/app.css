@@ -28,7 +28,7 @@ body {
   }
 
   .title {
-    @apply mt-6 text-4xl font-medium tracking-[-0.02em] text-balance text-neutral-900 sm:text-5xl sm:leading-[1.05];
+    @apply mt-6 text-4xl font-medium tracking-[-0.02em] text-balance text-fuchsia-900 sm:text-5xl sm:leading-[1.05];
   }
 
   .lede {
