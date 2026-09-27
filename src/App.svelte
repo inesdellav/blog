@@ -98,7 +98,7 @@
 
     <!-- footer -->
      <footer>
-        <p>&copy; 2026 Colori Mancanti | Fatto con il cuore</p>
+        <p>&copy; 2026 Colori Mancanti | Fatto con il ❤️</p>
     </footer>
   </main>
 {/if}
