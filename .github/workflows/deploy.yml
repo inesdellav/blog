@@ -5,6 +5,11 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 # Allow only one concurrent deployment, skipping runs queued between the
 # in-progress and latest queued runs. Do not cancel in-progress runs so a
 # deploy that already started is never left half-published.
@@ -12,10 +17,8 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+env:
+  HUGO_VERSION: 0.166.0
 
 jobs:
   build:
@@ -24,31 +27,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
         with:
-          bun-version: latest
+          submodules: recursive
+          fetch-depth: 0
 
-      - name: Install dependencies
-        run: bun install --frozen-lockfile
+      - name: Install Hugo
+        run: |
+          curl -sSL -o "${{ runner.temp }}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${{ runner.temp }}/hugo.deb"
 
-      - name: Type check
-        run: bun run check
-
-      - name: Unit tests
-        run: bun run test
-
-      - name: Build static site
-        run: bun run build
-        env:
-          # vite.config.ts derives the Pages sub-path (/repo/) automatically,
-          # so plain `bun run build` just works on forks. Set BASE_PATH=/
-          # only when deploying behind a custom domain or a <user>.github.io site.
-          BASE_PATH: ${{ vars.BASE_PATH }}
-
-      - name: Add .nojekyll
-        run: touch dist/.nojekyll
+      - name: Build site
+        run: hugo --minify --gc
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -56,7 +46,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: public
 
   deploy:
     name: Deploy

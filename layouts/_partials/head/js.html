@@ -1,0 +1,10 @@
+{{- $lang := .Site.Language.Lang -}}
+{{- $js := slice (resources.Get "js/main.js") (resources.Get "js/search.js") | resources.Concat "js/bundle.js" -}}
+
+{{- if hugo.IsDevelopment }}
+  <script src="{{ $js.RelPermalink }}" data-lang="{{ $lang }}"></script>
+{{- else }}
+  {{- with $js | js.Build (dict "minify" true) | fingerprint }}
+    <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" data-lang="{{ $lang }}"></script>
+  {{- end }}
+{{- end }}

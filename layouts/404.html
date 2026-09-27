@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <div class="post-detail-card">
+    <h1 class="post-detail-title">{{ T "pageNotFound" }}</h1>
+    <div class="post-detail-content">
+      <p>Qui non c'è (ancora) niente: <code>{{ .RelPermalink }}</code>.</p>
+      <p><a href="{{ "" | relLangURL }}">{{ T "home" }}</a></p>
+    </div>
+  </div>
+{{ end }}

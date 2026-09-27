@@ -1,82 +1,54 @@
 # AGENTS.md
 
-Guidance for AI coding agents working in this repo. Humans: see `README.md` for onboarding; agents: this file is your entrypoint.
+Guida per agenti AI che lavorano in questo repo. Per gli umani vedi `README.md`.
 
-## 1. What this is
+## Cos'è
 
-A clean static webapp template: **Svelte 5 (runes) + Vite 8 + TailwindCSS 4 + PWA**, managed with **Bun**. No SvelteKit, no external router. It builds to a fully static `dist/` and deploys to GitHub Pages via Actions.
+Blog personale statico: **Hugo** (≥ 0.166.0, extended) + tema **Zen** (`themes/zen`,
+git submodule) + **GitHub Pages** via Actions. Nessun Node/Bun, nessun bundler: Hugo
+fa da solo (pipeline CSS/JS via Hugo Pipes).
 
-- Entry: `index.html` → `src/main.ts` → `src/App.svelte`
-- Routing: hand-rolled history-API SPA in `src/lib/router.ts` (`home | post <slug> | not-found`)
-- Content: build-time `.md → HTML` via `plugins/md.ts`, listed in `src/lib/posts.ts`, rendered in `src/routes/Post.svelte`
-- Styling: design tokens + component classes in `src/app.css` (see `DESIGN.md`)
-- PWA: manifest + service worker in `vite.config.ts`, update UI in `src/PwaUpdate.svelte`
-- CI/deploy: `.github/workflows/ci.yml`, `.github/workflows/deploy.yml`
+- URL: <https://www.colorimancanti.it/> — `baseURL` in `hugo.toml`, dominio in `static/CNAME`.
+- Lingua: italiano, `defaultContentLanguage = 'it'`, contenuti in `content/` (non in sottocartella lingua).
+- Tema a monte: <https://github.com/zenpe/zen>. Gli override del sito stanno in `layouts/`.
 
-## 2. You are free to change anything
-
-This template is **fully flexible**. Restructure folders, delete the demo page, swap styling, add dependencies, replace the router or the markdown pipeline — all normal. Treat everything below as current conventions to follow **only while the subsystem they describe still exists**. If you replace a subsystem, update or delete the docs that describe it (`DESIGN.md`, `knowledge/`).
-
-## 3. Commands (Bun only)
+## Comandi
 
 ```bash
-bun install       # install dependencies
-bun run dev       # start the dev server
-bun run check     # svelte-check type/diagnostics — must pass before build
-bun run test      # unit tests with bun test — must pass before build
-bun run build     # production build into dist/
-bun run preview   # preview the production build
+git submodule update --init --recursive   # il tema è un submodule: serve prima di buildare
+hugo server -D                            # dev server
+hugo --minify --gc                        # build in public/
 ```
 
-Bun only. Test runner is `bun test` (`tests/*.test.ts`); CI runs `check` + `test` + `build`.
+Non c'è un runner di test: la verifica è `hugo --minify --gc` che deve finire senza errori.
 
-## 4. Code map
+## Mappa del codice
 
-| Path | Role |
+| Percorso | Ruolo |
 |---|---|
-| `index.html` | Vite entry, mounts `#app`, PWA icon links, `theme-color` |
-| `src/main.ts` | Imports Geist fonts + `app.css`, mounts `App` |
-| `src/App.svelte` | Root route switch; demo landing page (counter, posts list, deploy guide) |
-| `src/lib/router.ts` | `Route`, `withBase`, `pathWithoutBase`, `navigate`, `currentRoute`, `handleLinkClick`, `parseQuery`, `parseHash` |
-| `src/lib/posts.ts` | `import.meta.glob` over `src/content/*.md`, draft filter, date-desc sort |
-| `src/lib/storage.ts` | Never-throw `localStorage` helpers (`StorageLike`, `memoryStorage`, `readStored`, …) |
-| `src/lib/local-store.svelte.ts` | Runes `localStore(key, initial)` factory (check/build-covered, not unit-tested) |
-| `src/lib/async.ts` | `AsyncState` machine + `fetchJson` + `toErrorMessage` |
-| `src/lib/form.ts` | Pure validators (`required`, `emailField`, `minLength`, `validateAll`) |
-| `src/routes/Post.svelte` | Renders `{@html post.html}` inside `article.prose` |
-| `src/content/*.md` | Markdown posts with frontmatter |
-| `plugins/md.ts` | Vite plugin: frontmatter + GFM render + heading ids + asset rewrite + `404.html` |
-| `plugins/seo.ts` | Build-time SEO: head injection (canonical/`og:url`/RSS) + `sitemap.xml`/`rss.xml`/`robots.txt` |
-| `src/Seo.svelte` | Per-route `<title>`/description/canonical/OG via `<svelte:head>` |
-| `src/md.d.ts` | `PostMetadata` / `PostModule` types + `*.md` module declaration |
-| `src/app.css` | Tailwind import, `@theme` tokens, `@layer components` classes |
-| `vite.config.ts` | `mdPlugin`, `seoPlugin`, Svelte, Tailwind, `VitePWA`; Pages-aware `base` + `SITE_URL` derivation |
-| `svelte.config.js` | `vitePreprocess()` |
-| `tsconfig.json` | Strict: `noUncheckedIndexedAccess`, `noUnusedLocals/Parameters`, `verbatimModuleSyntax`, `erasableSyntaxOnly` |
+| `hugo.toml` | Config: `baseURL`, lingua, menu, `outputs` (FlexSearch/ArchiveJSON), `params` |
+| `content/about.md` | Pagina "Chi sono?" (`layouts/page.html` del tema) |
+| `content/posts/` | Sezione blog; la home elenca `where .Site.RegularPages "Type" "posts"` |
+| `content/archive/_index.md` | Pagina `/archive/`; `outputs` aggiunge `archive-month.json` |
+| `i18n/it.toml` | Stringhe UI in italiano (il tema ne ha solo en/zh) |
+| `layouts/_partials/head/css.html` | Override: compila lo SCSS del tema + link favicon |
+| `layouts/_partials/head/js.html` | Override: concatena `main.js`+`search.js`, **esclude** `busuanzi.js` |
+| `layouts/_partials/footer.html` | Override: sezione link utili solo se `friendshipLinks` è definito |
+| `layouts/_partials/sidebar.html` | Override: card Categorie/Tag solo se esistono tassonomie; niente contatori visite |
+| `layouts/404.html` | Pagina 404 (la usa GitHub Pages) |
+| `static/` | favicon, apple-touch-icon, icone PWA |
+| `themes/zen/` | Tema (submodule, non modificare: gli override vanno in `layouts/`) |
+| `.github/workflows/deploy.yml` | Build Hugo + deploy su Pages |
 
-## 5. Invariants (while these subsystems exist)
+## Invarianti
 
-1. **Base-aware links.** Pages serves project sites under `/<repo>/`. Always build internal links with `withBase(path)`, navigate with `navigate()` / `handleLinkClick()`, match with `pathWithoutBase()`. Never hardcode `/`-rooted hrefs in app code. External links use `target="_blank" rel="noreferrer"`.
-2. **SPA fallback.** `mdPlugin.closeBundle()` copies `dist/index.html` → `dist/404.html` **in-band** so Workbox precaches it. Do not replace with a post-build `cp`.
-3. **Markdown asset convention.** `/x` → base-prefixed; `./x` or `x` → colocated asset in `public/content/<slug>/x`. Keep `__BASE__` placeholder flow in `plugins/md.ts`.
-4. **PWA scope.** `start_url`/`scope` follow `base`; icons live in `public/` and are listed in `includeAssets`. Keep manifest `theme_color` in sync with the app chrome.
-5. **Strict check.** `bun run check` must pass before `bun run build`. Respect `exactOptionalPropertyTypes`, `noUncheckedIndexedAccess`, and `verbatimModuleSyntax` (use `import type` where appropriate).
-
-## 6. Conventions
-
-- **Styling:** reuse `@layer components` classes from `src/app.css`; change the look by editing `@theme` tokens, not by inlining ad-hoc Tailwind everywhere. Render markdown HTML inside `prose`. See `DESIGN.md`.
-- **Interactive patterns:** `knowledge/frontend-patterns.md` is the recipe book (add route + lazy import, `localStore`, async fetch, form, query/hash). Use its primitives in `src/lib/`; keep new validators/state pure and `bun test`-covered.
-- **Fonts:** via Fontsource (`@fontsource-variable/geist`, `geist-mono`), wired in `main.ts` and `@theme`.
-- **Posts:** `src/content/<slug>.md` with `title` (required), `date`, `description`, `draft` frontmatter. `draft: true` hides the post in `PROD` builds only.
-- **TypeScript:** strict; prefer `import type`, avoid unused locals/params, narrow `unknown` frontmatter explicitly.
-
-## 7. Where to read next
-
-- `DESIGN.md` — the design system (documents current `app.css`; agents may expand it).
-- `knowledge/README.md` — index of deep-dive guides:
-  - `knowledge/architecture.md` — router, build pipeline, base path, PWA
-  - `knowledge/content-authoring.md` — markdown pipeline, frontmatter, assets
-  - `knowledge/deployment.md` — CI, Pages setup, `BASE_PATH`, manual deploy
-  - `knowledge/frontend-patterns.md` — route/lazy, `localStore`, async, form, query recipes
-
-`knowledge/` is **docs-only**: it lives at the repo root, is never imported by `src/`/`plugins/`, and is never built into `dist/`. Keep it that way.
+1. **Non modificare `themes/zen/`**: sovrascrivi in `layouts/` / `assets/` / `i18n/` / `static/`,
+   che hanno precedenza sul tema.
+2. **`head/js.html` esclude `busuanzi.js`** di proposito: carica uno script di analytics
+   esterno (`busuanzi.ibruce.info`). Non reintrodurlo.
+3. **Radice del sito.** Il sito vive in radice sul dominio personalizzato `www.colorimancanti.it`; `baseURL` deve restare `https://www.colorimancanti.it/` e `static/CNAME` deve contenere `www.colorimancanti.it`.
+4. **Ricerca.** `assets/js/search.js` del tema cerca l'indice in `/<lingua>/flexsearch.json`
+   tranne che per il cinese; per questo `[outputFormats.FlexSearch]` ha `path = 'it'`.
+   Se cambi la lingua, aggiorna quel valore.
+5. **Contenuti.** Frontmatter YAML: `title` obbligatorio; `date`, `description`, `categories`,
+   `tags`, `featured_image` opzionali. Articoli in `content/posts/`.

@@ -1,0 +1,81 @@
+baseURL = 'https://www.colorimancanti.it/'
+title = 'Colori Mancanti'
+theme = 'zen'
+enableRobotsTXT = true
+timeZone = 'Europe/Rome'
+
+defaultContentLanguage = 'it'
+defaultContentLanguageInSubdir = false
+
+[pagination]
+  pagerSize = 10
+
+[languages]
+  [languages.it]
+    locale = 'it-IT'
+    label = 'Italiano'
+    title = 'Colori Mancanti'
+    weight = 1
+    contentDir = 'content'
+
+[languages.it.menus]
+  [[languages.it.menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+    identifier = 'home'
+  [[languages.it.menus.main]]
+    name = 'Chi sono'
+    pageRef = '/about/'
+    weight = 20
+    identifier = 'about'
+  [[languages.it.menus.main]]
+    name = 'Blog'
+    pageRef = '/posts/'
+    weight = 30
+    identifier = 'posts'
+  [[languages.it.menus.main]]
+    name = 'Archivio'
+    pageRef = '/archive/'
+    weight = 40
+    identifier = 'archive'
+
+[params]
+  description = 'è solo nel buio che ritrovo colori mancanti'
+  githubRepoUrl = 'https://github.com/inesdellav/blog'
+  defaultPostLayout = 'grid'
+  mainSections = ['posts']
+  enableComments = false
+  [params.algolia]
+    appId = ''
+    apiKey = ''
+    indexName = ''
+
+[mediaTypes]
+  [mediaTypes.'application/json']
+    suffixes = ['json']
+
+[outputs]
+  home = ['HTML', 'RSS', 'FlexSearch']
+  section = ['HTML', 'ArchiveJSON']
+  taxonomy = ['HTML']
+  term = ['HTML']
+
+[outputFormats.ArchiveJSON]
+  mediaType = 'application/json'
+  baseName = 'archive-month'
+
+# The theme's search.js looks for the index at "/<lang>/flexsearch.json" unless
+# the site language is Chinese, so publish an extra copy there.
+[outputFormats.FlexSearch]
+  mediaType = 'application/json'
+  baseName = 'flexsearch'
+  path = 'it'
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false

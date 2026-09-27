@@ -1,0 +1,109 @@
+[home]
+other = "Home"
+
+[archive]
+other = "Archivio"
+
+[tags]
+other = "Tag"
+
+[categories]
+other = "Categorie"
+
+[search]
+other = "Cerca"
+
+[language]
+other = "Lingua"
+
+[featuredImage]
+other = "Immagine di copertina"
+
+[readingTime]
+one = "{{ .Count }} minuto di lettura"
+other = "{{ .Count }} minuti di lettura"
+
+[wordCount]
+one = "{{ .Count }} parola"
+other = "{{ .Count }} parole"
+
+[next]
+other = "Successivo"
+
+[previous]
+other = "Precedente"
+
+[readMore]
+other = "Continua a leggere"
+
+[noResults]
+other = "Nessun risultato"
+
+[searchResults]
+other = "Risultati della ricerca"
+
+[close]
+other = "Chiudi"
+
+[pageNotFound]
+other = "Pagina non trovata"
+
+[siteInfo]
+other = "Informazioni sul sito"
+
+[articleCount]
+other = "Articoli"
+
+[visitorCount]
+other = "Visitatori"
+
+[pageViewCount]
+other = "Visualizzazioni"
+
+[sitePageViewCount]
+other = "Visualizzazioni totali"
+
+[lastUpdated]
+other = "Ultimo aggiornamento"
+
+[friendLinks]
+other = "Link utili"
+
+[sitemap]
+other = "Mappa del sito"
+
+[poweredBy]
+other = "Generato con"
+
+[posts]
+other = "Articoli"
+
+[about]
+other = "Chi sono"
+
+[contact]
+other = "Contatti"
+
+[more]
+other = "Altro"
+
+[allRightsReserved]
+other = "Tutti i diritti riservati."
+
+[searchInitFailed]
+other = "Impossibile inizializzare la ricerca"
+
+[darkMode]
+other = "Cambia tema chiaro/scuro"
+
+[closeNavbar]
+other = "Chiudi la barra di navigazione"
+
+[switchToListLayout]
+other = "Passa alla vista elenco"
+
+[switchToGridLayout]
+other = "Passa alla vista griglia"
+
+[comments]
+other = "Commenti"

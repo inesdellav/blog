@@ -1,0 +1,9 @@
+{{- $options := (dict "targetPath" "css/style.css" "outputStyle" (cond hugo.IsDevelopment "expanded" "compressed")) -}}
+{{- $style := resources.Get "css/style.scss" | toCSS $options | fingerprint -}}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
+<style>
+  /* Page-view counter (busuanzi) is disabled in head/js.html. */
+  #page-views { display: none; }
+</style>
