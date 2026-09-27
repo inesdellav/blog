@@ -1,6 +1,0 @@
-[submodule "themes/zen"]
-	path = themes/zen
-	url = https://github.com/zenpe/zen.git
-[submodule "themes/zen2"]
-	path = themes/zen2
-	url = https://github.com/inesdellav/zen

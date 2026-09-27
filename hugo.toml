@@ -1,6 +1,6 @@
 baseURL = 'https://www.colorimancanti.it/'
 title = 'Colori Mancanti'
-theme = 'zen2'
+theme = 'zen'
 enableRobotsTXT = true
 timeZone = 'Europe/Rome'
 

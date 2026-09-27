@@ -5,7 +5,7 @@ Guida per agenti AI che lavorano in questo repo. Per gli umani vedi `README.md`.
 ## Cos'è
 
 Blog personale statico: **Hugo** (≥ 0.166.0, extended) + tema **Zen** (`themes/zen`,
-git submodule) + **GitHub Pages** via Actions. Nessun Node/Bun, nessun bundler: Hugo
+incluso nel repo) + **GitHub Pages** via Actions. Nessun Node/Bun, nessun bundler: Hugo
 fa da solo (pipeline CSS/JS via Hugo Pipes).
 
 - URL: <https://www.colorimancanti.it/> — `baseURL` in `hugo.toml`, dominio in `static/CNAME`.
@@ -15,7 +15,6 @@ fa da solo (pipeline CSS/JS via Hugo Pipes).
 ## Comandi
 
 ```bash
-git submodule update --init --recursive   # il tema è un submodule: serve prima di buildare
 hugo server -D                            # dev server
 hugo --minify --gc                        # build in public/
 ```
@@ -37,7 +36,7 @@ Non c'è un runner di test: la verifica è `hugo --minify --gc` che deve finire 
 | `layouts/_partials/sidebar.html` | Override: card Categorie/Tag solo se esistono tassonomie; niente contatori visite |
 | `layouts/404.html` | Pagina 404 (la usa GitHub Pages) |
 | `static/` | favicon, apple-touch-icon, icone PWA |
-| `themes/zen/` | Tema (submodule, non modificare: gli override vanno in `layouts/`) |
+| `themes/zen/` | Tema Zen vendored (non modificare: gli override vanno in `layouts/`) |
 | `.github/workflows/deploy.yml` | Build Hugo + deploy su Pages |
 
 ## Invarianti

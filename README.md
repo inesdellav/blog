@@ -1,8 +1,8 @@
 # Colori Mancanti
 
-Blog personale di Ines Dellavalle. Sito statico in [Hugo](https://gohugo.io/), tema [Zen](https://themes.gohugo.io/themes/zen/) (`themes/zen`, git submodule), pubblicato su GitHub Pages.
+Blog personale di Ines Dellavalle. Sito statico in [Hugo](https://gohugo.io/), tema [Zen](https://themes.gohugo.io/themes/zen/) (`themes/zen`, incluso nel repo), pubblicato su GitHub Pages.
 
-- Sito: <https://inesdellav.github.io/>
+- Sito: <https://www.colorimancanti.it/>
 - Lingua: italiano (`defaultContentLanguage = 'it'`), contenuto non in sottocartella → gli URL stanno in radice.
 
 ## Requisiti
@@ -19,7 +19,6 @@ sudo dpkg -i hugo_extended_0.166.0_linux-amd64.deb
 ## Comandi
 
 ```bash
-git submodule update --init --recursive   # scarica il tema (prima volta / dopo un clone)
 hugo server -D                            # dev server su http://localhost:1313/
 hugo --minify --gc                        # build in public/
 ```
@@ -35,7 +34,7 @@ content/
 i18n/it.toml               # stringhe di interfaccia in italiano
 layouts/_partials/         # override del tema: head/css, head/js, footer, sidebar
 static/                    # favicon e icone (copiati in radice dell'output)
-themes/zen/                # tema (submodule)
+themes/zen/                # tema Zen (incluso nel repo, non submodule)
 .github/workflows/deploy.yml
 ```
 
