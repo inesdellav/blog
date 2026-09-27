@@ -95,6 +95,11 @@
         </li>
       {/each}
     </ul>
+
+    <!-- footer -->
+     <footer>
+        <p>&copy; 2026 Colori Mancanti | Fatto con il cuore</p>
+    </footer>
   </main>
 {/if}
 
