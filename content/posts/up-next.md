@@ -13,7 +13,7 @@ Questo sito cresce insieme a me, e ho un sacco di idee su come crescere!
 - [x] Cambiare titolo [fatto 27/6/2026]
 - [ ] Inserire quando ho aggiornato i post
 - [ ] Capire come mettere le foto
-- [ ] Fare navbar 
+- [x] Fare navbar 
 - [ ] Mettere ogni post in un riquadrino carino
 - [ ] Etichettare i post per contenuto
 - [ ] Fare 404 page personalizzata
@@ -21,8 +21,8 @@ Questo sito cresce insieme a me, e ho un sacco di idee su come crescere!
 - [ ] Scrivere che il mio sito è sotto Creative Commons
 - [ ] Creare un logo per il sito
 - [ ] Mettere il nome del sito sotto forma di immagine
-- [ ] Fare un robots.txt
-- [ ] Aggiungere modalità notte
+- [x] Fare un robots.txt
+- [ ] Aggiungere modalità notte [già presente al 27/6/26; da finalizzare]
 
 # Cambiamenti di contenuto
 - [ ] Mettere pagina "about me"
