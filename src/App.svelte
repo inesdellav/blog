@@ -40,12 +40,12 @@
     />
     <Post post={activePost} />
   {:else}
-    <Seo title="Post not found" path="/" noindex={true} />
+    <Seo title="Post non trovato" path="/" noindex={true} />
     <main class="page">
       <p class="eyebrow">404</p>
-      <h1 class="title">Post not found.</h1>
+      <h1 class="title">Questo post non c'è ancora. Forse arriverà prima o poi</h1>
       <div class="actions">
-        <a href={withBase("/")} class="btn-primary">Back home</a>
+        <a href={withBase("/")} class="btn-primary">Torna alla home</a>
       </div>
     </main>
   {/if}
@@ -64,7 +64,7 @@
   <Seo path="/" />
   <!-- MAIN PAGE -->
   <main class="page">
-    <h1 class="title">Ines</h1>
+    <h1 class="title">Colori Mancanti</h1>
     <ul class="steps">
       {#each posts as post (post.slug)}
         <li>
