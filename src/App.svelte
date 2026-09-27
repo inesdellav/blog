@@ -65,6 +65,23 @@
   <!-- MAIN PAGE -->
   <main class="page">
     <h1 class="title">Colori Mancanti</h1>
+
+    <!-- navbar -->
+     <header>
+        <h1>Colori Mancanti</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/hello">About Me</a></li> <!-- SISTEMA href! -->
+                <li><a href="/blog">Blog Posts</a></li>
+               <!--  <li><a href="#contact">Contact</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- lista dei post, in ordine cronologico inverso-->
+    <!-- VEDI TU SE ORDINARLI PER ARGOMENTO PRIMA O POI -->
     <ul class="steps">
       {#each posts as post (post.slug)}
         <li>
