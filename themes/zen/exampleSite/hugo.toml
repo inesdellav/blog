@@ -22,15 +22,15 @@ defaultContentLanguageInSubdir = false
         name = "Hugo Documentation"
         url = "https://gohugo.io/"
 
-  [languages.zh]
-    languageCode = 'zh-CN'
-    languageName = '中文'
-    title = "Zen主题演示"
+  [languages.it]
+    languageCode = 'it-IT'
+    languageName = 'Italiano'
+    title = "Zen"
     weight = 2
-    contentDir = "content/zh"
-    [languages.zh.params]
-      [[languages.zh.params.friendshipLinks]]
-        name = "Hugo中文文档"
+    contentDir = "content/it"
+    [languages.it.params]
+      [[languages.it.params.friendshipLinks]]
+        name = "Documentazione di Hugo"
         url = "https://gohugo.io/"
 
 # Global parameters

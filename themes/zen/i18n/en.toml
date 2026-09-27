@@ -87,8 +87,8 @@ other = "Contact"
 [more]
 other = "More"
 
-[allRightsReserved]
-other = "All rights reserved."
+[madeWith]
+other = "Made with my ❤️ - and with"
 
 [searchInitFailed]
 other = "Failed to initialize search"
