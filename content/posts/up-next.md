@@ -19,6 +19,7 @@ Questo sito cresce insieme a me, e ho un sacco di idee su come crescere!
 - [ ] Mettere il nome del sito sotto forma di immagine
 - [ ] Sistemare modalità notte
 - [ ] Mettere modalità notte di default
+- [ ] Mettere sottotitolo del blog
 
 ## Cambiamenti tecnici già fatti
 - [x] Cambiare titolo [fatto 27/6/2026]
