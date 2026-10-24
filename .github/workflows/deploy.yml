@@ -18,12 +18,12 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  HUGO_VERSION: 0.166.0
+  HUGO_VERSION: 0.168.0
 
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
