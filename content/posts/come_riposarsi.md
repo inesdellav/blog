@@ -1,3 +1,9 @@
+---
+title: "Camera oscura"
+date: "2026-10-11"
+description: "idee in sviluppo"
+---
+
 # come riposarsi
 
 Di carattere sono una persona molto attiva: ho sempre molti impegni, molti lavori da fare per altre persone. Ma quando alla sera devo studiare non riesco a fermarmi: anche se sono sulla sedia, la mia testa rimbalza da tutte le parti come una pallina. Non riesco neppure a riposare davvero, perché mi sento in colpa quando lo faccio, perché continuo a pensare a tutte le cose che potrei fare invece di starmene ferma.
