@@ -1,5 +1,5 @@
 ---
-title: "Camera oscura"
+title: "Come riposarsi"
 date: "2026-10-11"
 description: "idee in sviluppo"
 ---
