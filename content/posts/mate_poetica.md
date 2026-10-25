@@ -1,4 +1,9 @@
-# La matematica è poetica
+---
+title: "la matematica è poetica"
+date: "2026-10-24"
+description: "ci sto lavorando"
+---
+
 NB il titolo di questo saggio è un omaggio al libro *La matematica è politica* di Chiara Valerio, che cito molte volte in questo saggio
 
 

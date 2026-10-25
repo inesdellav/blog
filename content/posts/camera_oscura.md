@@ -1,3 +1,4 @@
+---
 title: "Camera oscura"
 date: "2026-09-26"
 description: "idee in sviluppo"
@@ -27,4 +28,5 @@ macchine sempre più come persone, persone sempre più come macchine: il corpo e
 (salvo rare eccezioni)
 perché secondo me i romanzi compattano molte più infomrazioni a parità di lunghezza
 soprattutto i romanzi hanno l'ambiguità e i saggi no
-e poi i saggi mi sembra sempre abbiano quella componente di tromboneria, di pensare che le loro parole siano così essenziali da dover essere ascoltate; il romanzo non mi sembra abbia questa pretesa, perché ti deve anche sedurre con lo stile e la trama oltre che con i tmei
+e poi i saggi mi sembra sempre abbiano quella componente di tromboneria, di pensare che le loro parole siano così essenziali da dover essere ascoltate; il romanzo non mi sembra abbia questa pretesa, perché ti deve anche sedurre con lo stile e la trama oltre che con i temi
+(non c'è un filo di ipocrisia nel parlarne sotto forma di saggio?)

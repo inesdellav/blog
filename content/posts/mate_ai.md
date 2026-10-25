@@ -1,24 +1,32 @@
+---
+title: "Matematica e LLM"
+date: "2026-10-24"
+description: "idee al vento"
+---
 # matematica e LLM: idee al vento
+
+Quando ho saputo della storia che forse OpenAI aveva risolto le equazioni di Navier Stokes [CERCA SE È DAVVERO ANDATA A FINIRE COSÌ] subito ho provato un senso di insofferenza viscerale. Il mio primo pensiero è stato: chissenefrega, la matematica non è per le cose, è per le persone. Per me una matematica fatta da una macchina era automaticamente non degna di attenzione. L'idea che qualcosa di matematico fatto da qualcosa che non fosse una persona potesse essere interessante mi sembrava qualcosa di così filisteo, qualcosa che avrebbe potuto pensare solo qualcuno che ritenesse che la matematica fosse solo una questione di risultati, non di quello che si trova strada facendo.
+Il problema è che pochi sanno che la matematica è un'arte, qualcosa dove conta il processo produttivo, e non una tecnica, cioè qualcosa dove conta il processo. O meglio, la matematica ha elementi sia delle arti sia delle tecniche: il processo È il prodotto, ciò che la matematica cerca più che i risultati sono le loro dimostrazioni.
 
 # in soldoni
 * fastidio viscerale: la matematica è per le persone (fastidio viscerale anche perché la matematica è pensieri oziosi alla ricerca del kairos [se non devi cercare di ottenere fondi...], e questa dei vari openai è invece una mentalità molto orientata alla produttività)
 mi è capitato un po' di volte di usare qualche chatbot studiando, tendenzialmente quando dovevo preparare un esame ed ero di corsa. per la tesi però ho fatto praticamente tutto io (ho chiesto solo una spiegazione a Gemini - in cui tra l'altro si è incartato da solo) e questo mi ha dato una certa soddisfazione
 * non tutti lo sanno e pensano sia una cosa solo tecnica (distinzione arti/tecniche)
 * i vari openai non sanno che la matematica è per le persone => colonizzazione
-* cosa fare? quello che siamo bravi a fare: fermarci a riflettere (Chiara Valerio?)
+* cosa fare? 
 
-* p.s. la discussione è amplissima: vuoi dare qualche testimonianza / parere diverso dal tuo che ti è sembrato interessante?
+Nel frattempo preparando il saggio ho avuto problemi col blog e ho chiesto a deepseek, sentendomi ipocrita. Poi ho ripensato al fatto che solo qualche mese fa ero molto più incuriosita e ottimista. Penso che quello che ha iniziato a farmi andare di traverso gli LLM sia stato il fatto che venivano presentati come *il futuro*. Ma non esiste il futuro; esistono i futuri. I futuri, poi, esistono solo se si immaginano. E questa è una cosa che la matematica insegna tantissimo: a immaginare.
+Forse è questa la prospettiva per il futuro della matematica: continuare a fare quello che siamo bravi a fare, cioè fermarci a riflettere. Stavolta però ci toccherà anche una riflessione grossa sulla nostra cultura e su quali valori vogliamo avere nel nostro futuro. Dovrebbe essere una riflessione dove non abbiamo paura di andare fino in fondo con la nostra immaginazione e intrattenere il pensiero di tutte le conseguenze (cosa che la matematica ci insegna già dopotutto); un momento per dialogare con tutte le persone che fanno matematica, per ascoltare e lasciarci incuriosire anche da opinioni distanti dalle nostre.
+LLM o no, penso che comunque dovremo passare dal fatto che la matematica è e rimane fatta dalle persone per le persone, come dicevo all'inizio, a prescindere dal fatto che usino degli LLM o meno. Questa è un'occasione enorme per guardarci in faccia (nei limiti del possibile) e parlarci sinceramente, e dobbiamo saperla sfruttare.
 
+ (Chiara Valerio?)
+* una possibile prospettiva: le macchine come strumento di espressione di sè, esattamente come lo è la matematica, dopotutto
+una prospettiva c'è se teniamo bene a mente che sono le persone al centro e non le macchine; le macchine obbediscono e le persone comandano; questo significa però che le persone sono responsabili, cosa che va poco di moda al giorno d'oggi
+alla fine continuo a mantenere l'idea che avevo all'inizio dell'articolo - che dovremmo riscoprire la matematica come disciplina che parla delle persone e che va praticata con altre persone - ma in maniera più sfumata
 
-DICHIARAZIONE DI LEIDA  
-vuoi fare un recap di quello che hanno detto gli altri, dire quello che pensi tu (che è molto radicale e per questo molto interessante) oppure tutti e due?
-
-https://proofsandprompts.com/2026/10/22/is-it-fish-love/ mi ha fatto pensare; prima opinione positiva che leggo che sia a misura di umano
-
-odio il termine "intelligenza artificiale", perché è una trovata di marketing per decentralizzare le persone: è il motivo per cui per indicare programmi come ChatGPT il termine che uso è LLM oppure chatbot, tendenzialmente. In mancanza di sinonimi migliori mi capiterà comunque di usare la locuzione "intelligenza artificiale", o direttamente la sigla AI.
 
 ## colonizzazione della matematica
-e come potevamo noi contare / con il piede straniero sopra il cuore?
+e come potevamo noi cantare / con il piede straniero sopra il cuore?
 
 A chi mi dice che l'intelligenza artificiale è il futuro rispondo: non esiste il futuro, esistono i futuri
 
@@ -28,6 +36,8 @@ le varie ditte AI che dimostrano risultati matematici partono da presupposti fil
 
 
 ha senso dire che esistono *i matematici*? Sono davvero così un monolite, un insieme uniforme?
+i fondi dopotutto non venivano dati in base a chi faceva capire meglio le cose, ma a chi le scopriva per primo (https://proofsandprompts.com/2026/10/23/disgusted-by-ai/)
+è in realtà una forma di ipocrisia della comunità matematica (Bessis)
 
 Bessis: I matematici non sono esattamente luddisti: sono persone che tengono tante cose passate (tipo le lavagne col gesso) ma anche tante cose nuove (tipo i computer)
 > Mathematicians may look like Luddites, but they rarely are. They love pen and paper, blackboard and chalk, but they jumped on Donald Knuth’s typesetting revolution. A century ago, they chose to rebuild their entire knowledge stack on a new operating system, set theory, that promised massive gains in reliability and scalability. A few decades later, they recognized that there was no real difference between a mathematical proof and a calculation, and set out to build the first computers. Deep learning, with its heavy use of linear algebra and stochastic gradient descent, is a brainchild of mathematics.
