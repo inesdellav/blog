@@ -30,3 +30,12 @@ perché secondo me i romanzi compattano molte più infomrazioni a parità di lun
 soprattutto i romanzi hanno l'ambiguità e i saggi no
 e poi i saggi mi sembra sempre abbiano quella componente di tromboneria, di pensare che le loro parole siano così essenziali da dover essere ascoltate; il romanzo non mi sembra abbia questa pretesa, perché ti deve anche sedurre con lo stile e la trama oltre che con i temi
 (non c'è un filo di ipocrisia nel parlarne sotto forma di saggio?)
+
+# il kairos
+kairos = occasione favorevole
+un modo diverso di misurare il tempo, non regolare ma concentrato in pochi momenti
+
+La matematica è pensieri oziosi alla ricerca del kairos (se non devi cercare di ottenere fondi...). Quanti matematici, discutendo di ai, si sono messi a raccontare le proprie storie? Storie di persone che avevano incontrato, di coincidenze, di kairos, tempo non come tempo cronologico ma come occasione favorevole?
+
+# non esiste il futuro; esistono i futuri
+Il futuro sta fermo, ma noi ci muoviamo nello spazio infinito - Rilke (il contrario di quello che sto cercando di dire)
