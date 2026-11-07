@@ -33,3 +33,12 @@ Nella programmazione c'è qualcosa di profondamente umanistico, vicino alla scri
 cfr Zen e l'arte della manutenzione della motocicletta
 
 la poesia serve a trovare pattern, come la matematica (On Being)
+
+il confine tra le arti e le tecniche è labilissimo: tutto quello che le persone creano parla delle persone stesse (i Kraftwerk lo sapevano molto bene)
+
+Bessis, la matematica come viaggio alla scoperta di sè stessi (e di chi fa matematica con noi, strada facendo)
+Puoi raccontare di tutte le cose che hai imparato facendo matematica, dal fascino delle dualità all'umiltà della fatica
+Puoi anche raccontare di tutti gli amici da mille cammini di vita diversi che hai incontrato facendo matematica (anche se quella è più un'ode al frequentare l'uni)
+
+
+quella che la matematica sia una faccenda estetica non è esattamente un'idea nuova: pensiamo all'*Apologia di un matematico* di Hardy
